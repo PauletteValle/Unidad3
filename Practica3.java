@@ -9,25 +9,22 @@ import java.util.Scanner;
  *
  * @author moram
  */
-public class Practica3 {
+public class FibonacciPractica3 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Dame la cantidad de numeros de laserie Fibonacci");
+        System.out.println("Dame la cantidad de numeros de la serie Fibonacci:");
         
         int n = input.nextInt();
-        int[] fibonacci = new int [n];
+        int a = 0, b = 1;
         
-        fibonacci [0] = 0;
-        fibonacci [1] = 1;
+        System.out.println("La serie Fibonacci es " + n + "numeros: " + a + " " + b);
         
-        for (int i = 2; i < n; i++) {
-            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-        }
-        System.out.println("La serie Fibonacci es de " + n + "numeros:");
-        
-        for(int i = 0; i < n; i++){
-            System.out.println(fibonacci[1] + "  ");
+        for(int i = 2; i < n; i++){
+            int c = a + b;
+            System.out.println(" " + c);
+            a = b;
+            b = c;
         }
         
     }
